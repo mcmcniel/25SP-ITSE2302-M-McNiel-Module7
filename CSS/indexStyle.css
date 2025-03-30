@@ -1,0 +1,290 @@
+/* Setting global font and removing the margin and padding from the screen */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+/* HEADER SECTION STYLE */
+header {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+/* Style for the company logo and company name */
+.companyNameLogoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1%;
+}
+.companyLogo {
+    padding-right: 10px;
+}
+.companyNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.companyName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+.companyTagline {
+    font-size: 6px;
+    color: white;
+}
+.companyNameOne {
+    color: white;
+}
+.companyNameTwo {
+    color: black;
+}
+
+/* NAVIGATION STYLE */
+.navigationContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+li {
+    padding: 0px 20px;
+    font-size: 25px;
+    list-style: none;
+    background-color: white;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* SHIRT DESIGNER PANEL STYLE */
+.mainShirtDesigner {
+    display: flex;
+    flex-direction: row;
+}
+.designPanelContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    height: 88vh;
+    width: 33%;
+    overflow: auto;
+}
+.designPanelTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+/* First and Last Name fields */
+.nameFields {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+label {
+    padding-top: 10px;
+}
+#firstName {
+    font-size: 18px;
+    width: 100%;
+}
+#lastName {
+    font-size: 18px;
+    width: 100%;
+}
+/* Style for the checkbox and radio button container */
+.shirtInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+    margin: 20px;
+    gap: 20%;
+}
+/* Email address style */
+.emailField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+#emailAddress {
+    font-size: 18px;
+    width: 100%;
+}
+/* Shirt color picker style */
+.shirtColorField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+#shirtColor {
+    font-size: 18px;
+    width: 100%;
+}
+/* Shirt quantity fields style */
+.shirtQtyFields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.countField {
+    width: 25%;
+    margin: 2px;
+}
+.countField label {
+    font-size: 18px;
+    font-weight: bold;
+}
+.countField input {
+    width: 50px;
+    font-size: 18px;
+}
+/* Submit and reset button style */
+.formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.formButtons input {
+    padding: 0px 20px;
+    font-size: xx-large;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.submitButton {
+    background-color: red;
+    color: white;
+}
+.resetButton {
+    background-color: black;
+    color: white;
+}
+/* SHIRT PREVIEW STYLE */
+.shirtPreviewContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.shirtLogoButtonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.shirtLogoButtonContainer button {
+    padding: 0px 20px;
+    font-size: xx-large;
+    margin-right: 10px;
+    border-radius: 10px;
+    border-width: 5px;
+    margin: 10px;
+}
+/* Actual shirt style */
+.shirtContainer {
+    position: relative;
+}
+.baseShirt {
+    z-index: 0;
+}
+/* This color overlay is how we can create the colored shirt effect */
+.shirtColorOverlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    mix-blend-mode: multiply;
+}
+.baseShirtOverlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.shirtLogo {
+    position: absolute;
+    visibility: hidden;
+    top: 20%;
+    left: 37%;
+    z-index: 3;
+}
+/* ORDER CONFIRMATION STYLE */
+.orderConfirmation {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: 150px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    margin: 50px;
+    visibility: hidden;
+}
+.orderConfirmMessage {
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.orderInformation {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    gap: 100px;
+}
+/* Return button style */
+.btnReturn {
+    margin-top: 20px;
+    padding: 0px 20px;
+    font-size: xx-large;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}

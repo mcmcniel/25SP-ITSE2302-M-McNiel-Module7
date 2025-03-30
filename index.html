@@ -1,0 +1,314 @@
+<!-- Beginning of HTML document -->
+<!DOCTYPE html>
+<!-- Setting language to English -->
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Shirt design page for ActiveWear.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="CSS/indexStyle.css" />
+    <!-- Title of webpage -->
+    <title>ActiveWear - Designer</title>
+    <!-- Linking the JavaScript file -->
+    <script src="Scripts/indexControl.js" defer></script>
+  </head>
+  <!-- WEBPAGE BODY -->
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- Div to contain the company name and logo -->
+      <div class="companyNameLogoContainer">
+        <!-- Actual Logo -->
+        <img
+          src="Images/logo.png"
+          alt="Company logo for ActiveWear.com"
+          width="100"
+          height="100"
+          class="companyLogo"
+        />
+        <!-- Div to hold the company name -->
+        <div class="companyNameContainer">
+          <div class="companyName">
+            <h1 class="companyNameOne">ACTIVE</h1>
+            <h1 class="companyNameTwo">WEAR</h1>
+          </div>
+          <!-- Div to hold company tagline -->
+          <div class="companyTagline">
+            <h1>CUSTOMIZED PERFORMANCE CLOTHES</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation links -->
+      <div class="navigationContainer">
+        <nav>
+          <ul>
+            <!-- These links simply refresh the page -->
+            <a href="index.html"><li>HOME</li></a>
+            <a href="index.html"><li>PRODUCTS</li></a>
+            <a href="index.html"><li>DESIGN</li></a>
+            <a href="index.html"><li>ABOUT</li></a>
+            <a href="index.html"><li>ACCOUNT</li></a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- MAIN SECTION -->
+    <main>
+      <!-- SHIRT DESIGNER SECTION -->
+      <div class="mainShirtDesigner">
+        <!-- Div to hold the information for the panel -->
+        <form class="designPanelContainer">
+          <!-- Title of design panel -->
+          <div class="designPanelTitle">
+            <h3>DESIGN PANEL</h3>
+          </div>
+          <!-- Textboxes for First and Last Name -->
+          <div class="nameFields">
+            <label for="firstName">FIRST NAME</label>
+            <input type="text" id="firstName" name="firstName" />
+            <label for="lastName">LAST NAME</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+          <!-- Div to hold the shirt information -->
+          <div class="shirtInfo">
+            <!-- Checkboxes for shirt sizes -->
+            <div class="shirtSizes">
+              <h3>SIZES NEEDED</h3>
+              <br />
+              <!-- Large checkbox -->
+              <input
+                type="checkbox"
+                id="shirtLarge"
+                name="shirtLarge"
+                value="10.00"
+              />
+              <label for="shirtLarge">Large ($10.00)</label>
+              <br />
+              <!-- Medium checkbox -->
+              <input
+                type="checkbox"
+                id="shirtMedium"
+                name="shirtMedium"
+                value="8.00"
+              />
+              <label for="shirtMedium">Medium ($8.00)</label>
+              <br />
+              <!-- Small checkbox -->
+              <input
+                type="checkbox"
+                id="shirtSmall"
+                name="shirtSmall"
+                value="6.00"
+              />
+              <label for="shirtSmall">Small ($6.00)</label>
+            </div>
+            <!-- Holds the radio buttons for choosing shirt fabric -->
+            <div class="shirtFabric">
+              <h3>SHIRT FABRIC</h3>
+              <br />
+              <!-- Cotton radio button -->
+              <input
+                type="radio"
+                id="shirtCotton"
+                name="shirtType"
+                value="5.00"
+              />
+              <label for="shirtCotton">Cotton ($5.00)</label>
+              <br />
+              <!-- Polyester radio button -->
+              <input
+                type="radio"
+                id="shirtPolyester"
+                name="shirtType"
+                value="3.00"
+              />
+              <label for="shirtPolyester">Polyester ($3.00)</label>
+            </div>
+          </div>
+          <!-- Textbox for Email Address -->
+          <div class="emailField">
+            <label for="emailAddress">EMAIL ADDRESS</label>
+            <input type="email" id="emailAddress" name="emailAddress" />
+          </div>
+          <!-- Color picker for choosing a shirt color -->
+          <div class="shirtColorField">
+            <label for="shirtColor">SHIRT COLOR</label>
+            <input
+              type="color"
+              id="shirtColor"
+              name="shirtColor"
+              value="#ffffff"
+            />
+          </div>
+          <!-- Div to hold all of the number input fields for the shirt counts -->
+          <div class="shirtQtyFields">
+            <div class="countField">
+              <!-- Large shirt count -->
+              <label for="largeShirtCount">LARGE SHIRTS NEEDED</label>
+              <br />
+              <input
+                type="number"
+                id="largeShirtCount"
+                name="largeShirtCount"
+                min="0"
+                disabled="true"
+              />
+            </div>
+            <div class="countField">
+              <!-- Medium shirt count -->
+              <label for="mediumShirtCount">MEDIUM SHIRTS NEEDED</label>
+              <br />
+              <input
+                type="number"
+                id="mediumShirtCount"
+                name="mediumShirtCount"
+                min="0"
+                disabled="true"
+              />
+            </div>
+            <div class="countField">
+              <!-- Small shirt count -->
+              <label for="smallShirtCount">SMALL SHIRTS NEEDED</label>
+              <br />
+              <input
+                type="number"
+                id="smallShirtCount"
+                name="smallShirtCount"
+                min="0"
+                disabled="true"
+              />
+            </div>
+          </div>
+          <!-- Div to hold the Submit and Reset buttons -->
+          <div class="formButtons">
+            <input class="submitButton" type="submit" value="SUBMIT" />
+            <input class="resetButton" type="reset" value="RESET" />
+          </div>
+        </form>
+        <!-- Div to hold the actual shirt and shirt logo buttons -->
+        <div class="shirtPreviewContainer">
+          <!-- Div to hold the shirt logo buttons -->
+          <div class="shirtLogoButtonContainer">
+            <!-- No Shirt Logo button -->
+            <button class="btnNone">
+              <img
+                src="Images/none.png"
+                alt="None button for shirt logo design"
+                width="100"
+                height="100"
+              />
+            </button>
+            <!-- Dog Logo button -->
+            <button class="btnDog">
+              <img
+                src="Images/dog.png"
+                alt="Dog logo button for shirt logo design"
+                width="100"
+                height="100"
+              />
+            </button>
+            <!-- Buffalo Logo button -->
+            <button class="btnBuffalo">
+              <img
+                src="Images/buffalo.png"
+                alt="Buffalo logo button for shirt logo design"
+                width="100"
+                height="100"
+              />
+            </button>
+            <!-- Splat Logo button -->
+            <button class="btnSplat">
+              <img
+                src="Images/splat.png"
+                alt="Splat logo button for shirt logo design"
+                width="100"
+                height="100"
+              />
+            </button>
+            <!-- Butterfly Logo button -->
+            <button class="btnButterfly">
+              <img
+                src="Images/butterfly.png"
+                alt="Butterfly logo button for shirt logo design"
+                width="100"
+                height="100"
+              />
+            </button>
+            <!-- Eagle Logo button -->
+            <button class="btnEagle">
+              <img
+                src="Images/eagle.png"
+                alt="Eagle logo button for shirt logo design"
+                width="100"
+                height="100"
+              />
+            </button>
+          </div>
+          <!-- Div to hold the shirt preview -->
+          <div class="shirtContainer">
+            <!-- Blank shirt image -->
+            <img
+              src="Images/shirt.png"
+              alt="A shirt for the shirt design"
+              width="800"
+              height="800"
+              class="baseShirt"
+            />
+            <!-- This covers up the outside of the shirt that way we can create a colored shirt effect -->
+            <img
+              src="Images/shirt-overlay-cover.png"
+              alt="Shirt overlay"
+              width="800"
+              height="800"
+              class="baseShirtOverlay"
+            />
+            <!-- This is the color that goes over the shirt. It's just a square but with the overlay cover above,
+                 it looks like only the shirt is being colored -->
+            <div class="shirtColorOverlay"></div>
+            <img
+              src="Images/none.png"
+              width="200"
+              height="200"
+              class="shirtLogo"
+            />
+          </div>
+          <!-- Instructions for selecting a shirt logo -->
+          <h3>SELECT A SHIRT LOGO FROM THE OPTIONS ABOVE</h3>
+        </div>
+      </div>
+      <!-- ORDER CONFIRMATION SECTION -->
+      <div class="orderConfirmation">
+        <!-- Order confirmed messages -->
+        <h2 class="orderConfirmMessage">ORDER CONFIRMED</h2>
+        <h3 class="orderNumber">ORDER #: 123456789</h3>
+        <h3 class="thankYouMessage">Thank you for shopping with us!</h3>
+        <!-- Div to hold the order information -->
+        <div class="orderInformation">
+          <!-- Div to hold the first column of order information -->
+          <div class="orderInfoColumnOne">
+            <h3 id="customerName">Customer Name:</h3>
+            <h3 id="largeShirtAmt">Large Shirt Amt:</h3>
+            <h3 id="mediumShirtAmt">Medium Shirt Amt:</h3>
+            <h3 id="smallShirtAmt">Small Shirt Amt:</h3>
+            <h3 id="shirtTypeAmt">Shirt Fabric:</h3>
+            <br />
+            <br />
+            <h3 id="subtotal">SUBTOTAL:</h3>
+            <h3 id="tax">TAX:</h3>
+            <h3 id="total">TOTAL:</h3>
+          </div>
+          <!-- Div to hold the second column of order information -->
+          <div class="orderInfoColumnTwo">
+            <h3 id="customerEmail">Customer Email:</h3>
+            <h3 id="shirtlogo">Shirt Logo:</h3>
+            <h3 id="shirtColorText">Shirt Color:</h3>
+          </div>
+        </div>
+        <!-- Button to return to the shirt designer screen -->
+        <button class="btnReturn">RETURN TO DESIGNER</button>
+      </div>
+    </main>
+  </body>
+</html>
