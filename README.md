@@ -1,2 +1,2 @@
 <h1>ActiveWear Shirt Designer</h1>
-This webpage is for Module 7 showcasing a shirt designer webpage that is meant to be placed onto an existing website.
+The ActiveWear Shirt Designer is a shirt designer page meant to be placed in a pre-existing website as a new feature. The designer has different logos to choose from as well as a color picker to customize your shirt further. It also handles user orders and gathers required information from the customer.
